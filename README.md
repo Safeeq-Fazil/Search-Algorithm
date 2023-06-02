@@ -46,15 +46,86 @@ else:
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+''' 
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by: Safeeq Fazil.A
+RegisterNumber: 212222240086
+'''
+def binarySearchIter(array, k, low, high):
+    while low <=high:
+        mid = low + (high - low)//2
+        
+        if array[mid] == k:
+            return mid
+            
+        elif array[mid] < k:
+            low = mid +1
+        
+        else:
+            high =mid -1
+            
+    return -1
+    
+    
+array = eval(input())
+array.sort()
+k = eval(input())
 
+result = binarySearchIter(array, k, 0, len(array)-1)
 
-
-
+if(result == -1):
+    
+    print(array)
+    
+    print("Element not found")
+    
+else:
+    
+    print(array)
+    
+    print("Element found at index: ",result)
 
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+''' 
+Program to find the element in a list using Binary Search (recursive Method).
+Developed by: Safeeq Fazil.A
+RegisterNumber: 212222240086
+'''
+def BinarySearch(arr, k, low, high):
+    if high >=low:
+        mid = low + (high - low)//2
+        
+        if arr[mid] == k:
+            return mid
+            
+        elif arr[mid] > k:
+            return BinarySearch(arr, k, low, mid-1)
+        
+        else:
+            return BinarySearch(arr, k, mid +1, high)
+            
+    else:
+        return -1
+    
+    
+arr = eval(input())
+arr.sort()
+k = eval(input())
+result = BinarySearch(arr, k, 0, len(arr)-1)
 
+if(result == -1):
+    
+    print(arr)
+    
+    print("Element not found")
+    
+else:
+    
+    print(arr)
+    
+    print("Element found at index: ",result)
 
 
 
@@ -65,10 +136,11 @@ iii)	# Find the element in a list using Binary Search (recursive Method).
 ## linear search method:
 ![py 3b 1](https://github.com/Safeeq-Fazil/Search-Algorithm/assets/118680361/ca87bac2-f817-4f7c-8ac8-945b6bef6fe3)
 
+## Binary Search(Iterative Method):
+![py 3b 2](https://github.com/Safeeq-Fazil/Search-Algorithm/assets/118680361/4e1d0a7c-6869-409d-bc28-3b47ad0ab2a2)
 
-
-
-
+## Binary Search (recursive Method):
+![py 3b 3](https://github.com/Safeeq-Fazil/Search-Algorithm/assets/118680361/bf96d252-1ebf-46de-92c6-4ff85cdfd298)
 
 
 ## Result
